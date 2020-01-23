@@ -5,6 +5,7 @@ export const Link = styled( RouterLink )`
     display: flex;
     position: relative;
     align-items: center;
+    text-decoration: none;
 `;
 
 export const Title = styled.div`
@@ -13,6 +14,7 @@ export const Title = styled.div`
     font-weight: 300;
     margin-top: 10px;
     margin-left: 13px;
+    color: #222222;
 
     span {
         color: #f16d7f;

@@ -1,53 +1,33 @@
 import React from 'react';
 import { Logo } from './_partial/Logo';
+import styled from 'styled-components';
+import { DropDown } from '../../ui';
+
+const HtmlHeader = styled.header`
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+    background-color: #ffffff;
+    padding: 30px 0;
+    border: 1px solid #ececec;
+`;
+
+
 
 export const Header: React.FC = () => {
     return (
-        <header>
+        <HtmlHeader>
 
         <div className="container header-flex">
-
             <div className="header-left">
-
                 <Logo/>
-                {/* <a className ="logo" href="index.html">
-                    <img src="images/logo.png" alt="logo"/>
-                    <div className="brand-name">bran<span>d</span></div>
-                </a> */}
+
+                <div>
+                    <DropDown options={ [] } title={'Browse'}/>
+                </div>
                 <form className="header-form" action="#">
                     <div className="select" >
-                        <div className="browse-container">
-                            <a href="product.html" className="browse"> <span>Browse</span></a>
-                            <nav className="browse-items hide">
-                                <div className="browse-menu">
-                                    <h3><a href="product.html">Women</a></h3>
-                                    <ul>
-                                        <li className="browse-menu-li"><a href="product.html">Dresses</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Tops</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Sweaters/Knits</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Jackets/Coats</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Blazers</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Denim</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Leggings/Pants</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Skirts/Shorts</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Accessories</a></li>
-                                    </ul>
-                                </div>
-                                <div className="browse-menu">
-                                    <h3><a href="product.html">Man</a></h3>
-                                    <ul>
-                                        <li className="browse-menu-li"><a href="product.html">Tees/Tank tops</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Shirts/Polos</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Sweaters</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Sweatshirts/Hoodies</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Blazers</a></li>
-                                        <li className="browse-menu-li"><a href="product.html">Jackets/vests</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                        <input type="text" className="search-text" placeholder="Search for Item..."/> 
-                        <a href="product.html" className="find-btn search-button"><i className="fas fa-search"></i></a>
+
+                        {/* <input type="text" className="search-text" placeholder="Search for Item..."/> 
+                        <a href="product.html" className="find-btn search-button"><i className="fas fa-search"></i></a> */}
                     </div>
                 </form>
             </div>
@@ -77,6 +57,6 @@ export const Header: React.FC = () => {
                 </div>
             </div>
         </div>
-    </header>
+    </HtmlHeader>
     )
 }
