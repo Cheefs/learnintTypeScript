@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Title } from './styled.sc';
+import { Link } from '../../../ui/link';
+import { Title } from './styled.sc';
 
 export const Logo: React.FC = () => (
     <Link className ="logo" to="/">

@@ -3,7 +3,7 @@ import Style from './style';
 import { IDropDown } from './interfaces';
 import { DropDownOptions } from './optionsComponent';
 
-export const DropDown: React.FC<IDropDown> = ( props: IDropDown ) => {
+export const DropDown: React.FC<IDropDown> = ( props: IDropDown ): JSX.Element => {
     const [ collapse, toggle ] = useState( false );
     const { options, title, noOptionsMessage } = props;
     
