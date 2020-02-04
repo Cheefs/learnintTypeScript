@@ -1,35 +1,37 @@
 import React from 'react';
-import { Link } from '../../../../ui/link';
+import { ItemsStyle } from './style';
 
 export interface ICartNavContent {
     show: boolean,
     items: Array<object>,
     onCheckout: () => void,
     userId?: number,
+    totalPrice?: number
 }
 
 type Items = JSX.Element | null;
 
+
 export const CartItems: React.FC<ICartNavContent> = ( props: ICartNavContent ): Items => {
-    const { show, items, onCheckout, userId } = props;
+    const { show, items, totalPrice, onCheckout, userId } = props;
 
     if ( !show ) {
         return null;
     }
 
     return (
-        <div className="cart-items">
-            <div className="cart__container top-block">
-                {/* <!-- rendering cart goods from js --> */}
-            </div>
-            <div className="bottom-block">
-            <div className="cart-total-price">
-                <div className="cart-total__text"> TOTAL </div>
-                <div className="cart-total__price"></div>
-            </div>
-                <a onClick={ onCheckout } className="cart-btn btn-check-out">Checkout</a>
-                <Link to={ `/cart?userId=${ userId || null }` } className="cart-btn btn-to-cart">Go to cart</Link>
-            </div>
-        </div>
+        <ItemsStyle.Container className="cart__items">
+            <ItemsStyle.TopBlock className="items_top">
+                {/* <!-- rendering cart goods from js --> */} 
+            </ItemsStyle.TopBlock>
+            <ItemsStyle.BottomBlock className="items_bottom">
+                <ItemsStyle.ItemsPrice className="items_price">
+                    <div className="price_label">TOTAL</div>
+                    <div className="price_value">{ totalPrice || 0 }</div>
+                </ItemsStyle.ItemsPrice>
+                <ItemsStyle.Link to={ '/checkout' } className="to_checkout">Checkout</ItemsStyle.Link>
+                <ItemsStyle.Link to={ `/cart?userId=${ userId || null }` } className="to_cart">Go to cart</ItemsStyle.Link>
+            </ItemsStyle.BottomBlock>
+        </ItemsStyle.Container>
     )
 } 

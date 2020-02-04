@@ -1,4 +1,5 @@
 import React, { useState, SyntheticEvent, EventHandler } from 'react';
+import { Cart } from './style';
 import { CartItems } from './CartItems';
 
 export interface ICartNavButton {
@@ -12,12 +13,10 @@ export const CartNavButton: React.FC<ICartNavButton> = (props: ICartNavButton ):
     const handleClick: EventHandler<SyntheticEvent> = (): void => toggle( !show );
 
     return (
-        <div className="cart-btn-block">
-            <div className="cart__button" onClick={ handleClick }>
-                <img className="cart_image" src="/assets/cart.svg" alt="cart"/>
-                <span className="items-total">{ props.items.length }</span>
-            </div>
+        <Cart.Container className="cart__button" onClick={ handleClick }>
+            <img className="cart_image" src="/assets/cart.svg" alt="cart"/>
+            <Cart.Count className="items-total">{ props.items.length }</Cart.Count>
             <CartItems show={ show } { ...props }/>
-        </div>
-    )
+        </Cart.Container>
+    );
 }
