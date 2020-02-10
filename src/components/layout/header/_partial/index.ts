@@ -1,3 +1,3 @@
-export { Logo } from './Logo';
-export { CartNavButton } from './cartNavButton';
-export { AccountControl } from './AccountControl';
+export { Logo } from './logo';
+export { CartButton } from './cartButton';
+export { AccountControl } from './accountControl';

@@ -24,6 +24,8 @@ export const Style = {
         align-items: center;
     `,
     HeaderRight: styled.div`
+        min-width: 140px;
+        justify-content: space-between;
         display: flex;
         align-items: center;
     `,

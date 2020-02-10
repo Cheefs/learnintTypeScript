@@ -5,10 +5,14 @@ export const Cart = {
     Container: styled.div`
         position: relative;
     `,
-    Count: styled.div`
+    Img: styled.img`
+        cursor: pointer;
+    `,
+    Count: styled.span`
         position: absolute;
         width: 18px;
         display: block;
+        justify-content: center;
         height: 18px;
         background-color: #f16d7f;
         color: #ffffff;
@@ -23,10 +27,10 @@ export const Cart = {
         animation: cart-count 3s infinite;
 
         @keyframes cart-count {
-        0% {  background-color: transparent; }
-        30% { background-color: #f16d7f; }
-        60% { background-color: #e3455afc; }
-        100% { background-color: transparent; }
+            0% {  background-color: transparent; }
+            30% { background-color: #f16d7f; }
+            60% { background-color: #e3455afc; }
+            100% { background-color: transparent; }
         }
     `
 };

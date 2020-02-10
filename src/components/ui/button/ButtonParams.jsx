@@ -1,17 +1,17 @@
 const DEFAULT = 'default';
 const types = {
     default: {
-        padding: '7px 15px',
-        borderRadius: '2px',
-        border: '1px solid #dddd',
-        backgroundColor: '#9d9d9d',
-        color: '#ffff',
+        padding: '9px 23px',
+        borderRadius: '3px',
+
+        border: '1px solid transparent',
+        backgroundColor: '#f16d7f',
+        color: '#ffffff',
         fontWeight: 'bold',
         cursor: 'pointer',
         hover: {
-            backgroundColor: '#dddd',
-            textDecoration: 'none',
-            color: '#ffff',
+            backgroundColor: '#e3455afc',
+            color: '#ffffff',
         }
     },
 

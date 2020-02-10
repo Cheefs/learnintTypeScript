@@ -10,6 +10,10 @@ const StyledButton = styled.button`
     color: ${ (props) => setType(props.button, 'color') };
     font-weight: ${ (props) => setType(props.button, 'fontWeight') };
     cursor: ${ (props) => setType(props.button, 'cursor') };
+    border-radius: ${ (props) => setType(props.button, 'borderRadius') };
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+
     &:hover {
         text-decoration: ${ (props) => setType(props.button, 'hover', ' textDecoration') };
         color: ${ (props) => setType(props.button, 'hover', 'color') };

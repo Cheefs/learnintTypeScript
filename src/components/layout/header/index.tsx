@@ -1,10 +1,11 @@
 import React from 'react';
 import { dropDownCategories } from './data';
 import { DropDown, SearchInput } from '../../ui';
-import { Logo, CartNavButton, AccountControl } from './_partial';
+import { Logo, CartButton, AccountControl } from './_partial';
 import { Style } from './style';
 
 export const Header: React.FC = () => {
+
     return (
         <Style.HtmlHeader className="html__header">
             <Style.Container className="header__container">
@@ -16,7 +17,7 @@ export const Header: React.FC = () => {
                     </Style.FlexContainer>
                 </Style.HeaderLeft>
                 <Style.HeaderRight className="header-right">
-                    <CartNavButton items={ [] } onCheckout={ () => console.log('%c checkout', 'color: red') }/>
+                    <CartButton items={ [] } onCheckout={ () => console.log('%c checkout', 'color: red') }/>
                     <AccountControl/>
                 </Style.HeaderRight>
             </Style.Container>

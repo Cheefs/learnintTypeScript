@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../../../ui/link';
+import { Link } from '../../../../ui/link';
 import { Title } from './styled.sc';
 
 export const Logo: React.FC = () => (
